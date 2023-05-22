@@ -1,6 +1,6 @@
-o[[build]]
-command = "npm run build"  # Replace with your build command
-publish = "build"         # Replace with the directory containing your build artifacts
+[[build]]
+command = "npm run build" 
+publish = "build"         
 
 [[build.environment]]
 MY_DATA_JSON = "./databse/data.json" 
