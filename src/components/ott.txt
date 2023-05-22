@@ -1,0 +1,25 @@
+spotify
+
+
+const url = 'https://spotify23.p.rapidapi.com/playlist/?id=37i9dQZF1DX4Wsb4d7NKfP';
+const options = {
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Key': 'da3e9d6194msh99ca5a70f09bf66p1531afjsncb0199344067',
+		'X-RapidAPI-Host': 'spotify23.p.rapidapi.com'
+	}
+};
+
+fetch("url")
+.then((res)=>{return res.json()})
+.then((data)=>{
+        let d = data.items.filter((t)=>{  return t.tracks!=null })
+        setTrackers(d);
+        console.log(data.tracks.items);
+    })
+
+
+
+in the data we have one null value in middle so , i have applied filter method
+to remove the null value in middle.
+
